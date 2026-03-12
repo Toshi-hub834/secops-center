@@ -151,9 +151,3 @@ Priority Score = min((CVSS Base Score × Asset Criticality Multiplier) + (Affect
 
 **George Skhirtladze** — IT Specialist & Security Analyst  
 [GitHub](https://github.com/Toshi-hub834) · [LinkedIn](https://www.linkedin.com/in/george-skhirtladze-04b726272) · [Portfolio](https://toshi-hub834.github.io)
-```
-
-Save as `README.md` then create `requirements.txt`:
-```
-flask>=2.3.0
-requests>=2.31.0
