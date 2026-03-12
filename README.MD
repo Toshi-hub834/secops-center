@@ -22,6 +22,14 @@ A real-time security operations dashboard that pulls live CVE intelligence from 
 
 ---
 
+**Live Dashboard**
+![Dashboard](assets/dashboard.png)
+
+**Report Dashboard**
+![Dashboard](assets/report.png)
+
+---
+
 ## How It Works
 ```
 NVD API → CVE Feed → Asset Mapper → Risk Scorer → Prioritized Queue
