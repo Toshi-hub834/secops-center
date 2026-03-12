@@ -1,0 +1,60 @@
+{
+  "organization": "ACME Corp",
+  "last_updated": "2026-03-13",
+  "assets": [
+    {
+      "id": "srv-001",
+      "name": "Web Server",
+      "ip": "192.168.1.10",
+      "os": "Ubuntu 22.04",
+      "services": ["nginx", "openssl", "php"],
+      "criticality": "HIGH",
+      "department": "IT"
+    },
+    {
+      "id": "srv-002",
+      "name": "Database Server",
+      "ip": "192.168.1.20",
+      "os": "Ubuntu 20.04",
+      "services": ["mysql", "openssh"],
+      "criticality": "CRITICAL",
+      "department": "IT"
+    },
+    {
+      "id": "srv-003",
+      "name": "Mail Server",
+      "ip": "192.168.1.30",
+      "os": "Windows Server 2019",
+      "services": ["exchange", "iis", "openssl"],
+      "criticality": "HIGH",
+      "department": "IT"
+    },
+    {
+      "id": "wrk-001",
+      "name": "Finance Workstation",
+      "ip": "192.168.1.100",
+      "os": "Windows 10",
+      "services": ["smb", "rdp"],
+      "criticality": "HIGH",
+      "department": "Finance"
+    },
+    {
+      "id": "wrk-002",
+      "name": "Dev Workstation",
+      "ip": "192.168.1.101",
+      "os": "macOS 14",
+      "services": ["openssh", "docker"],
+      "criticality": "MEDIUM",
+      "department": "Development"
+    },
+    {
+      "id": "net-001",
+      "name": "Core Router",
+      "ip": "192.168.1.1",
+      "os": "Cisco IOS",
+      "services": ["snmp", "ssh"],
+      "criticality": "CRITICAL",
+      "department": "Network"
+    }
+  ]
+}

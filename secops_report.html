@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<title>SecOps Report — 2026-03-13 00:54:56</title>
+<style>
+  :root {
+    --bg:#0a0305; --bg2:#0f0408; --bg3:#140608;
+    --red:#c0152a; --gold:#c9943a; --bone:#e8dcc8; --bone-dim:#9a8f7e;
+    --border:rgba(192,21,42,0.25); --green:#4a9a6a; --orange:#e05c00;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--bone-dim); font-family:'Courier New',monospace; font-size:13px; }
+  header { background:var(--bg2); border-bottom:2px solid var(--red); padding:24px 40px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  header h1 { color:var(--bone); font-size:22px; letter-spacing:4px; }
+  .meta { font-size:11px; color:var(--bone-dim); }
+  .meta span { color:var(--gold); }
+  .container { padding:32px 40px; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:32px; }
+  .card { background:var(--bg2); border:1px solid var(--border); padding:20px; text-align:center; }
+  .card .num { font-size:40px; font-weight:bold; line-height:1; }
+  .card .label { font-size:9px; letter-spacing:2px; margin-top:4px; opacity:0.7; }
+  .c-red { color:var(--red); } .c-orange { color:var(--orange); }
+  .c-gold { color:var(--gold); } .c-green { color:var(--green); } .c-bone { color:var(--bone); }
+  .panel { background:var(--bg2); border:1px solid var(--border); padding:24px; margin-bottom:24px; }
+  .panel h2 { color:var(--gold); font-size:10px; letter-spacing:3px; margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--border); }
+  table { width:100%; border-collapse:collapse; }
+  th { color:var(--gold); font-size:9px; letter-spacing:2px; padding:8px 12px; text-align:left; border-bottom:1px solid var(--border); }
+  td { padding:8px 12px; border-bottom:1px solid rgba(192,21,42,0.06); font-size:11px; word-break:break-word; }
+  tr:hover td { background:rgba(192,21,42,0.04); }
+  .badge { display:inline-block; padding:2px 8px; font-size:9px; letter-spacing:1px; border:1px solid; }
+  .risk-bar { background:var(--bg3); height:4px; margin-top:4px; }
+  .risk-fill { height:4px; }
+  footer { border-top:1px solid var(--border); padding:20px 40px; font-size:10px; color:rgba(154,143,126,0.3); letter-spacing:2px; }
+</style>
+</head><body>
+<header>
+  <h1>⬡ SECOPS COMMAND CENTER</h1>
+  <div class="meta">Generated: <span>2026-03-13 00:54:56</span> &nbsp;|&nbsp; CVEs Analyzed: <span>20</span> &nbsp;|&nbsp; Assets: <span>6</span></div>
+</header>
+<div class="container">
+  <div class="summary-grid">
+    <div class="card"><div class="num c-red">0</div><div class="label">CRITICAL CVEs</div></div>
+    <div class="card"><div class="num c-orange">2</div><div class="label">HIGH CVEs</div></div>
+    <div class="card"><div class="num c-gold">11</div><div class="label">MEDIUM CVEs</div></div>
+    <div class="card"><div class="num c-green">7</div><div class="label">LOW CVEs</div></div>
+    <div class="card"><div class="num c-bone">4</div><div class="label">AFFECTED ASSETS</div></div>
+    <div class="card"><div class="num c-gold">4.21</div><div class="label">AVG CVSS SCORE</div></div>
+  </div>
+
+  <div class="panel">
+    <h2>PRIORITIZED CVE REMEDIATION QUEUE</h2>
+    <table>
+      <tr><th>CVE ID</th><th>SEVERITY</th><th>SCORE</th><th>PRIORITY</th><th>AFFECTED ASSETS</th><th>REMEDIATION</th></tr>
+      <tr>
+  <td style="color:var(--bone)">CVE-2025-13431</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.5</td>
+  <td>
+    10.0
+    <div class="risk-bar"><div class="risk-fill" style="width:100%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Database Server, Finance Workstation</td>
+  <td>Apply database patches. Use parameterized queries. Restrict DB access.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2025-14541</td>
+  <td><span class="badge" style="color:#e05c00;border-color:#e05c00">HIGH</span></td>
+  <td style="color:#e05c00">7.2</td>
+  <td>
+    9.64
+    <div class="risk-bar"><div class="risk-fill" style="width:96%;background:#e05c00"></div></div>
+  </td>
+  <td style="color:var(--gold)">Web Server, Finance Workstation</td>
+  <td>Apply Windows patches. Disable SMBv1. Restrict RDP access.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-1231</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.4</td>
+  <td>
+    8.68
+    <div class="risk-bar"><div class="risk-fill" style="width:86%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Web Server, Finance Workstation</td>
+  <td>Apply Windows patches. Disable SMBv1. Restrict RDP access.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-1893</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.4</td>
+  <td>
+    8.18
+    <div class="risk-bar"><div class="risk-fill" style="width:81%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Finance Workstation</td>
+  <td>Apply Windows patches. Disable SMBv1. Restrict RDP access.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-25870</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">5.8</td>
+  <td>
+    7.96
+    <div class="risk-bar"><div class="risk-fill" style="width:79%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Web Server, Mail Server</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-1571</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.1</td>
+  <td>
+    7.82
+    <div class="risk-bar"><div class="risk-fill" style="width:78%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Web Server</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2025-12699</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">5.5</td>
+  <td>
+    7.1
+    <div class="risk-bar"><div class="risk-fill" style="width:71%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Web Server</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-25872</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">5.3</td>
+  <td>
+    6.86
+    <div class="risk-bar"><div class="risk-fill" style="width:68%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Web Server</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-1507</td>
+  <td><span class="badge" style="color:#e05c00;border-color:#e05c00">HIGH</span></td>
+  <td style="color:#e05c00">7.5</td>
+  <td>
+    6.0
+    <div class="risk-bar"><div class="risk-fill" style="width:60%;background:#e05c00"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>HIGH: Schedule patching within 7 days. Monitor for exploitation.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2025-15524</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">4.3</td>
+  <td>
+    5.66
+    <div class="risk-bar"><div class="risk-fill" style="width:56%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">Finance Workstation</td>
+  <td>Apply Windows patches. Disable SMBv1. Restrict RDP access.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-1495</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.5</td>
+  <td>
+    5.2
+    <div class="risk-bar"><div class="risk-fill" style="width:52%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26006</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.5</td>
+  <td>
+    5.2
+    <div class="risk-bar"><div class="risk-fill" style="width:52%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26007</td>
+  <td><span class="badge" style="color:#c9943a;border-color:#c9943a">MEDIUM</span></td>
+  <td style="color:#c9943a">6.5</td>
+  <td>
+    5.2
+    <div class="risk-bar"><div class="risk-fill" style="width:52%;background:#c9943a"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>MEDIUM: Schedule patching within 30 days.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26013</td>
+  <td><span class="badge" style="color:#4a9a6a;border-color:#4a9a6a">LOW</span></td>
+  <td style="color:#4a9a6a">3.7</td>
+  <td>
+    2.96
+    <div class="risk-bar"><div class="risk-fill" style="width:29%;background:#4a9a6a"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-25251</td>
+  <td><span class="badge" style="color:#666;border-color:#666">UNKNOWN</span></td>
+  <td style="color:#666">0</td>
+  <td>
+    0.0
+    <div class="risk-bar"><div class="risk-fill" style="width:0%;background:#666"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26036</td>
+  <td><span class="badge" style="color:#666;border-color:#666">UNKNOWN</span></td>
+  <td style="color:#666">0</td>
+  <td>
+    0.0
+    <div class="risk-bar"><div class="risk-fill" style="width:0%;background:#666"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26037</td>
+  <td><span class="badge" style="color:#666;border-color:#666">UNKNOWN</span></td>
+  <td style="color:#666">0</td>
+  <td>
+    0.0
+    <div class="risk-bar"><div class="risk-fill" style="width:0%;background:#666"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26038</td>
+  <td><span class="badge" style="color:#666;border-color:#666">UNKNOWN</span></td>
+  <td style="color:#666">0</td>
+  <td>
+    0.0
+    <div class="risk-bar"><div class="risk-fill" style="width:0%;background:#666"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26039</td>
+  <td><span class="badge" style="color:#666;border-color:#666">UNKNOWN</span></td>
+  <td style="color:#666">0</td>
+  <td>
+    0.0
+    <div class="risk-bar"><div class="risk-fill" style="width:0%;background:#666"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr><tr>
+  <td style="color:var(--bone)">CVE-2026-26040</td>
+  <td><span class="badge" style="color:#666;border-color:#666">UNKNOWN</span></td>
+  <td style="color:#666">0</td>
+  <td>
+    0.0
+    <div class="risk-bar"><div class="risk-fill" style="width:0%;background:#666"></div></div>
+  </td>
+  <td style="color:var(--gold)">—</td>
+  <td>LOW: Include in next maintenance window.</td>
+</tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>IOC / THREAT INTELLIGENCE</h2>
+    <table>
+      <tr><th>IP ADDRESS</th><th>STATUS</th><th>CONFIDENCE</th><th>CATEGORY</th><th>REASON</th><th>SOURCE</th></tr>
+      <tr>
+  <td style="color:var(--bone)">45.33.32.156</td>
+  <td><span style="color:var(--red)">⚠ MALICIOUS</span></td>
+  <td style="color:var(--gold)">95%</td>
+  <td>Brute Force</td>
+  <td>Known SSH brute force source</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">10.0.0.55</td>
+  <td><span style="color:var(--red)">⚠ MALICIOUS</span></td>
+  <td style="color:var(--gold)">80%</td>
+  <td>Web Scanner</td>
+  <td>Nikto scanner activity detected</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">172.16.0.22</td>
+  <td><span style="color:var(--red)">⚠ MALICIOUS</span></td>
+  <td style="color:var(--gold)">90%</td>
+  <td>SQL Injection</td>
+  <td>SQL injection attempts detected</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">192.168.1.50</td>
+  <td><span style="color:var(--red)">⚠ MALICIOUS</span></td>
+  <td style="color:var(--gold)">75%</td>
+  <td>Brute Force</td>
+  <td>HTTP brute force attempts</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">185.220.101.1</td>
+  <td><span style="color:var(--red)">⚠ MALICIOUS</span></td>
+  <td style="color:var(--gold)">99%</td>
+  <td>Tor</td>
+  <td>Tor exit node — anonymization</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">194.165.16.11</td>
+  <td><span style="color:var(--red)">⚠ MALICIOUS</span></td>
+  <td style="color:var(--gold)">98%</td>
+  <td>C2/Malware</td>
+  <td>Known ransomware C2 server</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">8.8.8.8</td>
+  <td><span style="color:var(--green)">✓ CLEAN</span></td>
+  <td style="color:var(--gold)">0%</td>
+  <td>Clean</td>
+  <td>No threat intelligence found</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr><tr>
+  <td style="color:var(--bone)">1.1.1.1</td>
+  <td><span style="color:var(--green)">✓ CLEAN</span></td>
+  <td style="color:var(--gold)">0%</td>
+  <td>Clean</td>
+  <td>No threat intelligence found</td>
+  <td style="opacity:0.6">Local Threat Intel</td>
+</tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>ASSET INVENTORY</h2>
+    <table>
+      <tr><th>ID</th><th>NAME</th><th>IP</th><th>OS</th><th>CRITICALITY</th><th>SERVICES</th></tr>
+      <tr>
+  <td style="opacity:0.6">srv-001</td>
+  <td style="color:var(--bone)">Web Server</td>
+  <td style="color:var(--gold)">192.168.1.10</td>
+  <td>Ubuntu 22.04</td>
+  <td style="color:var(--orange)">HIGH</td>
+  <td style="opacity:0.7">nginx, openssl, php</td>
+</tr><tr>
+  <td style="opacity:0.6">srv-002</td>
+  <td style="color:var(--bone)">Database Server</td>
+  <td style="color:var(--gold)">192.168.1.20</td>
+  <td>Ubuntu 20.04</td>
+  <td style="color:var(--red)">CRITICAL</td>
+  <td style="opacity:0.7">mysql, openssh</td>
+</tr><tr>
+  <td style="opacity:0.6">srv-003</td>
+  <td style="color:var(--bone)">Mail Server</td>
+  <td style="color:var(--gold)">192.168.1.30</td>
+  <td>Windows Server 2019</td>
+  <td style="color:var(--orange)">HIGH</td>
+  <td style="opacity:0.7">exchange, iis, openssl</td>
+</tr><tr>
+  <td style="opacity:0.6">wrk-001</td>
+  <td style="color:var(--bone)">Finance Workstation</td>
+  <td style="color:var(--gold)">192.168.1.100</td>
+  <td>Windows 10</td>
+  <td style="color:var(--orange)">HIGH</td>
+  <td style="opacity:0.7">smb, rdp</td>
+</tr><tr>
+  <td style="opacity:0.6">wrk-002</td>
+  <td style="color:var(--bone)">Dev Workstation</td>
+  <td style="color:var(--gold)">192.168.1.101</td>
+  <td>macOS 14</td>
+  <td style="color:var(--gold)">MEDIUM</td>
+  <td style="opacity:0.7">openssh, docker</td>
+</tr><tr>
+  <td style="opacity:0.6">net-001</td>
+  <td style="color:var(--bone)">Core Router</td>
+  <td style="color:var(--gold)">192.168.1.1</td>
+  <td>Cisco IOS</td>
+  <td style="color:var(--red)">CRITICAL</td>
+  <td style="opacity:0.7">snmp, ssh</td>
+</tr>
+    </table>
+  </div>
+</div>
+<footer>SecOps Command Center &nbsp;|&nbsp; github.com/Toshi-hub834 &nbsp;|&nbsp; George Skhirtladze</footer>
+</body></html>
