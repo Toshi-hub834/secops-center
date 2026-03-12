@@ -23,10 +23,10 @@ A real-time security operations dashboard that pulls live CVE intelligence from 
 ---
 
 **Live Dashboard**
-![Dashboard](assets/dashboard.png)
+![Dashboard](assets/report.png)
 
 **Report Dashboard**
-![Dashboard](assets/report.png)
+![Dashboard](assets/dashboard.png)
 
 ---
 
